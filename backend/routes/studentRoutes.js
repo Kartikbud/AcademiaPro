@@ -2,13 +2,15 @@ const express = require('express')
 const router = express.Router()
 const {getStudents, setStudent, updateStudent, deleteStudent} = require('../controllers/studentController')
 
-router.get('/', getStudents)
+const {protect} = require('../middleware/authMiddleware')
 
-router.post('/',setStudent)
+router.get('/', protect, getStudents)
 
-router.put('/:id', updateStudent)
+router.post('/', protect, setStudent)
 
-router.delete('/:id', deleteStudent)
+router.put('/:id', protect, updateStudent)
+
+router.delete('/:id', protect, deleteStudent)
 
 
 module.exports = router
