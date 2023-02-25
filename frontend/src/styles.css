@@ -1,0 +1,271 @@
+html, body{
+
+  margin: 0;
+  padding: 0;
+}
+
+
+.main{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #d87700;
+  font-family: Arial, Helvetica, sans-serif; 
+}
+
+
+.main{
+  position: relative; /*background of website*/
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+
+nav{
+  background: linear-gradient(rgb(73, 0, 73), purple ,pink , white ); /*nav bar*/
+  display: flex;
+  width: 100%;
+  margin: auto;
+  padding: 2px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li{ /*nav bar for options such as such as about, hobbies, etc..*/
+  color: white;
+  list-style: none;
+  margin: 132px 40px;
+  margin-left: 1250px;
+  margin-top: 50px;
+}
+
+
+
+nav li a:hover { /*if user hovers it chnages to a grey*/
+  background-color: #D3D3D3;
+}
+
+.images{ /*formatting for images*/
+  top: 5%;
+  left: 0%;
+  position: absolute;
+  display: inline-block
+}
+
+.images1 { /*formatting for images*/
+  top: 0%;
+  left: -210%;
+  position: absolute;
+  display: inline-block;
+  padding-right: 450px;
+}
+
+.homepage{
+  display: flex;
+  position: relative; /*background of website*/
+  width: 100wh;
+  height: 100vh;
+  background: linear-gradient(90deg, rgb(151, 6, 107) 25%, rgb(101, 3, 104) 55%, rgb(120, 2, 135) 100%); /*remove pink*/
+  background-size: cover;
+  
+}
+
+
+.box1{
+  width: 36%; 
+  height: 90vh; 
+  top: 5%;
+  left: 47.5%;
+  position: absolute;
+  background: #ffffff;
+  background: linear-gradient(to right, rgb(255, 188, 188) 5%, #fcfbe9 90%);
+  border-radius: 20px;
+  
+
+}
+.box1:hover{
+  width: 50%; 
+  height: 90vh; 
+  transition: 1s;
+  box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.8);
+  border-radius: 27px;
+}
+
+
+.signup{
+position: relative;
+width:100%;
+height: 100%;
+}
+
+.signup label{
+color: #290255;
+font-size: 2.3em;
+justify-content: center;
+display: flex;
+margin: 50px;
+font-weight: bold;
+cursor: pointer;
+
+}
+.signup input{
+  color: #ffffff;
+width: 60%;
+height: 30px;
+background: #27005a;
+justify-content: center;
+display: flex;
+margin: 20px auto;
+padding: 10px;
+border: none;
+outline: none;
+border-radius: 5px;
+}
+.signup button{
+width: 60%;
+height: 40px;
+margin: 10px auto;
+justify-content: center;
+display: block;
+color: #ffffff;
+background: #1f0452;
+font-size: 1em;
+font-weight: bold;
+margin-top: 20px;
+outline: none;
+border: none;
+border-radius: 5px;
+}
+.signup button:hover{
+background: rgb(74, 0, 74)
+}
+
+.signup button a{
+  text-decoration: none;
+  color: white;
+  font-family: none;
+}
+
+
+
+.box2{
+  width: 45%; 
+  height: 90vh; 
+  top: 0%;
+  left: -50%;
+  position: absolute;
+  background: #FFFDD0;
+  background: linear-gradient(to left, rgb(255, 188, 188) 5%, #fcfbe9 90%);
+  border-radius: 20px;
+  
+
+}
+.box2:hover{
+  width: -400%; 
+  height: 90vh; 
+  left: -50%;
+  transition: 1s;
+  box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.8);
+  border-radius: 30px;
+  
+}
+
+.login{
+position: relative;
+width:100%;
+height: 100%;
+}
+
+.login label{
+color: #290255;
+font-size: 2.3em;
+justify-content: center;
+display: flex;
+margin: 50px;
+font-weight: bold;
+cursor: pointer;
+}
+
+
+.login input{
+  color: #ffffff;
+width: 60%;
+height: 30px;
+background: #27005a;
+justify-content: center;
+display: flex;
+margin: 20px auto;
+padding: 10px;
+border: none;
+outline: none;
+border-radius: 5px;
+  text-decoration: none;
+}
+.login button{
+width: 60%;
+height: 40px;
+margin: 10px auto;
+justify-content: center;
+display: block;
+color: #ffffff;
+background: #1f0452;
+font-size: 1em;
+font-weight: bold;
+margin-top: 20px;
+outline: none;
+border: none;
+border-radius: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+} 
+.login button a{
+  text-decoration: none;
+  color: white;
+}
+
+.login button:hover{
+background: rgb(78, 1, 78);
+}
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 200px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  margin-top: 0px;
+  background-color: black; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  right:0;
+  vertical-align: top;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  left: 70px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main1 {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
