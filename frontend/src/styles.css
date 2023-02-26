@@ -54,40 +54,42 @@ nav li a:hover { /*if user hovers it chnages to a grey*/
 
 .images1 { /*formatting for images*/
   top: 0%;
-  left: -210%;
+  left: -0%;
   position: absolute;
   display: inline-block;
   padding-right: 450px;
+  color: white;
 }
+
+
 
 .homepage{
   display: flex;
   position: relative; /*background of website*/
   width: 100wh;
   height: 100vh;
-  background: linear-gradient(90deg, rgb(151, 6, 107) 25%, rgb(101, 3, 104) 55%, rgb(120, 2, 135) 100%); /*remove pink*/
+  background: linear-gradient(90deg, rgba(151, 6, 141, 0.911) 25%, rgb(101, 3, 104) 55%, rgb(120, 2, 135) 100%); /*remove pink*/
   background-size: cover;
   
 }
 
-
 .box1{
-  width: 36%; 
-  height: 90vh; 
-  top: 5%;
-  left: 47.5%;
-  position: absolute;
-  background: #ffffff;
-  background: linear-gradient(to right, rgb(255, 188, 188) 5%, #fcfbe9 90%);
-  border-radius: 20px;
-  
+    width: 36%; 
+    height: 90vh; 
+    top: 5%;
+    left: 31%;
+    position: absolute;
+    background: #ffffff;
+    background: linear-gradient(to right, rgb(255, 188, 188) 5%, #fcfbe9 90%);
+    border-radius: 20px;
+    
 
 }
 .box1:hover{
   width: 50%; 
   height: 90vh; 
   transition: 1s;
-  box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 40px 30px rgba(0, 0, 0, 0.8);
   border-radius: 27px;
 }
 
@@ -227,45 +229,132 @@ border-radius: 5px;
 background: rgb(78, 1, 78);
 }
 
-/* The sidebar menu */
-.sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 200px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  margin-top: 0px;
-  background-color: black; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
-  right:0;
-  vertical-align: top;
+.login label{
+color: #290255;
+font-size: 2.3em;
+justify-content: center;
+display: flex;
+margin: 50px;
+font-weight: bold;
+cursor: pointer;
 }
 
-/* The navigation menu links */
-.sidenav a {
-  left: 70px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  text-align: center;
-  margin-top: 50px;
-}
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+  .sidebar{
+    position: fixed;
+    width: 240px;
+    left: -240px;
+    height: 100%;
+    top: 0;
+    background: linear-gradient(black, white);
+    transition: all .5s ease;
+  }
+  .sidebar header{
+    font-size: 28px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    background: black;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .sidebar a{
+    display: block;
+    height: 65px;
+    width: 100%;
+    color: white;
+    line-height: 65px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-left: 5px solid transparent;
+    font-family: 'Open Sans', sans-serif;
+    transition: all .5s ease;
+  }
+  a.active,a:hover{
+    border-left: 5px solid rgb(71, 1, 71);
+    color: rgb(136, 11, 136);
+  }
+  .sidebar a i{
+    font-size: 23px;
+    margin-right: 16px;
+  }
+  .sidebar a span{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  #check{
+    display: none;
+  }
+  label #btn,label #cancel{
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 15px 30px;
+    font-size: 29px;
+    background: black;
+    top: 5%;
+    left: 2%;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 45px;
+    transition: all .5s ease;
+    text-decoration: none;
+  }
+  label #cancel{
+    opacity: 0;
+    visibility: hidden;
+  }
+  #check:checked ~ .sidebar{
+    left: 0;
+  }
+  #check:checked ~ label #btn{
+    margin-left: 245px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  #check:checked ~ label #cancel{
+    margin-left: 245px;
+    opacity: 1;
+    visibility: visible;
+  }
+  @media(max-width : 860px){
+    .sidebar{
+      height: auto;
+      width: 70px;
+      left: 0;
+      margin: 100px 0;
+    }
+    header,#btn,#cancel{
+      display: none;
+    }
+    span{
+      position: absolute;
+      margin-left: 23px;
+      opacity: 0;
+      visibility: hidden;
+    }
+    .sidebar a{
+      height: 60px;
+    }
+    .sidebar a i{
+      margin-left: -10px;
+    }
+    a:hover {
+      width: 200px;
+      background: inherit;
+    }
+    .sidebar a:hover span{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 
-/* Style page content */
-.main1 {
-  margin-left: 160px; /* Same as the width of the sidebar */
-  padding: 0px 10px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.mission {
+    margin-top: 11%;
+    margin-left: 5%;
 }
